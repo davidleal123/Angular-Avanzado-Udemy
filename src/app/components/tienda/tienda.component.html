@@ -1,3 +1,35 @@
-<p>
+<h4>Utilizar jquery dentro de Angular</h4>
+<button id="botonjq"> Mostrar Texto</button>
+<p id="textojq" class="alert alert-warning">Lorem Ipsum</p>
+
+<div id="caja" style="width:100px;height:50px;border: 1px solid black; ">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</div>
+<br>
+Padre:
+<h1>
   {{titulo}}
+</h1>
+<ul>
+  <li>Camisa azul</li>
+</ul>
+<hr />
+<p>
+  Nombre del parque:
+  <input type="text" [(ngModel)]="nombreParque" (keyup)="mostrarNombre()" />
+</p>
+<p>
+  Resultado del parque: {{nombreParque}}
+</p>
+  <div *ngIf="miParque">
+    <h1>Datos de mi parque desde el hijo</h1>
+    <ul>
+    <li>{{miParque.nombre}}</li>
+    <li>{{miParque.metros}}</li>
+    <li>{{miParque.vegetacion}}</li>
+  </ul>
+  </div>
+
+<br>
+<p *ngIf="nombreParque">
+  Hijo:
+  <app-parques [nombre]="nombreParque" [metros]="666" (pasameLosDatos)="verDatosParque($event)"></app-parques>
 </p>
