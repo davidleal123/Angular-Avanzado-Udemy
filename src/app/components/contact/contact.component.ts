@@ -13,7 +13,7 @@ export class ContactComponent implements OnInit {
   }
 
 
-  guardarEmail(){
+  guardarEmail() {
     console.log(this.emailContacto);
     localStorage.setItem('emailContacto', this.emailContacto);
   }

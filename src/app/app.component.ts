@@ -13,14 +13,13 @@ export class AppComponent implements OnInit, DoCheck{
     this.emailContacto = localStorage.getItem('emailContacto');
   }
 
-  ngDoCheck(){
+  ngDoCheck() {
     this.emailContacto = localStorage.getItem('emailContacto');
   }
 
 
-  borrarEmail(){
+  borrarEmail() {
     localStorage.removeItem('emailContacto');
-    //localStorage.clear();
     this.emailContacto = null;
   }
 }
