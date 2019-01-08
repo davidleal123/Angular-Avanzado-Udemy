@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+  <div class="panel-body">Menú de filtros</div>
+  <div class="panel-footer">
+    <form class="form-inline" action="onSubmit()" #formGraph="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group col-sm-3" id="selecter1">
+        <label for="sel1">Selecciona Empresa:</label>
+        <select class="form-control" id="sel1" name="empresas" [(ngModel)] ="busqueda.empresa">
+          <option [ngValue]="empresa" selected="selected">{{empresa.Nombre}}</option>
+          <option *ngFor="let empresa of empresas" [ngValue]="empresa">{{ empresa.Nombre }}</option>
+        </select>
+      </div>
+ 
+      <input class="btn btn-primary" type="submit" value="Buscar!" />
+
+    </form>
+  </div>
+</div>
+
+<p *ngIf="selectedGraph">
+  <app-mostrar-graficas [busqueda]="busqueda" ></app-mostrar-graficas>
+</p>
+

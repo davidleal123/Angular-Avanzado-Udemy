@@ -12,7 +12,8 @@
                 <li><a [routerLink]="['/Cuidadores']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-user"></span>Cuidadores</a></li>
                 <li><a [routerLink]="['/Tienda']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-gift"></span>Tienda</a></li>
                 <li><a [routerLink]="['/Contacto']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-comment"></span>Contacto</a></li>
-                <li class="hidden"><span *ngIf="emailContacto">{{emailContacto}}
+                <li><a [routerLink]="['/Grafico']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-comment"></span>Grafico</a></li>
+                <li><span *ngIf="emailContacto">{{emailContacto}}
                         <button (click)="borrarEmail()">Borrar Email</button>
                     </span></li>
             </ul>

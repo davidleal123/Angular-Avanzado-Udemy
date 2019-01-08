@@ -14,6 +14,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { KeeperComponent } from './components/keeper/keeper.component';
 import { GuardarEmailComponent } from './modules/guardar-email/guardar-email.component';
 import { MostrarEmailComponent } from './modules/mostrar-email/mostrar-email.component';
+import { GraficoComponent } from './components/grafico/grafico.component';
+import { MostrarGraficasComponent } from './modules/mostrar-graficas/mostrar-graficas.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { MostrarEmailComponent } from './modules/mostrar-email/mostrar-email.com
     ContactComponent,
     KeeperComponent,
     GuardarEmailComponent,
-    MostrarEmailComponent
+    MostrarEmailComponent,
+    GraficoComponent,
+    MostrarGraficasComponent
   ],
   imports: [
     BrowserModule,

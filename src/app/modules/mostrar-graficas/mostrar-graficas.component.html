@@ -1,0 +1,17 @@
+
+<section id="top-graphs" class="content">Graficos de arriba
+  <div id="Titular">
+    {{busqueda.empresa.Nombre}}
+  </div>
+  <hr>
+  <div *ngIf="busqueda.empresa.Id === 0" class="row">
+  <div class="col-sm-4">Un chingo</div>
+  <div class="col-sm-4">De Graficos</div>
+  <div class="col-sm-4">Para Todos</div>
+  </div>
+  <div *ngIf="busqueda.empresa.Id !== 0">
+      <div class="col-lg-10 col-lg-offset-2">Informacion personalizada para cada empresa</div>
+      </div>
+</section>
+<hr>
+<section id="bot-graphs" class="content">Graficos de abajo</section>

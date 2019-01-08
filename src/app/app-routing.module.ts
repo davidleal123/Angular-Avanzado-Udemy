@@ -8,12 +8,14 @@ import { AnimalsComponent } from './components/animals/animals.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { KeeperComponent } from './components/keeper/keeper.component';
+import { GraficoComponent} from './components/grafico/grafico.component';
 const routes: Routes = [
   { path: 'Home', component: HomeComponent },
   { path: 'Tienda', component: TiendaComponent },
   { path: 'Contacto', component: ContactComponent },
   { path: 'Animales', component: AnimalsComponent },
   { path: 'Cuidadores', component: KeeperComponent },
+  { path: 'Grafico', component: GraficoComponent },
 
   { path: '', redirectTo: 'Home', pathMatch: 'full'},
   { path: '**', component: HomeComponent }

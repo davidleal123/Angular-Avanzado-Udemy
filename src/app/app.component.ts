@@ -6,10 +6,10 @@ import { Component, OnInit, DoCheck } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, DoCheck{
-  title = 'Curso de angular avanzado';
+  title = 'Plantilla de prueba de angular';
   emailContacto: string;
 
-  ngOnInit(){
+  ngOnInit() {
     this.emailContacto = localStorage.getItem('emailContacto');
   }
 
