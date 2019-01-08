@@ -9,18 +9,17 @@ export class AppComponent implements OnInit, DoCheck{
   title = 'Curso de angular avanzado';
   emailContacto: string;
 
-  ngOnInit(){
+  ngOnInit() {
     this.emailContacto = localStorage.getItem('emailContacto');
   }
 
-  ngDoCheck(){
+  ngDoCheck() {
     this.emailContacto = localStorage.getItem('emailContacto');
   }
 
 
-  borrarEmail(){
+  borrarEmail() {
     localStorage.removeItem('emailContacto');
-    //localStorage.clear();
     this.emailContacto = null;
   }
 }

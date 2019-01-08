@@ -1,3 +1,131 @@
 <p>
   keeper works!
 </p>
+
+<input type="file" (change)="fileChange($event)" placeholder="Upload file" accept=".pdf,.doc,.docx,.csv,.xls,.xlsx">
+<hr>
+<button (click)="emitirEvento()">Envia el post!!</button>
+<hr>
+
+<div class="col-lg-8 col-lg-offset-2 row" id="char-container">
+  <ngx-charts-bar-vertical [view]="view" [scheme]="colorScheme" [results]="single" [gradient]="gradient" [xAxis]="showXAxis"
+    [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" (select)="onSelect($event)">
+  </ngx-charts-bar-vertical>
+</div>
+
+
+
+<hr>
+<div class="col-lg-8 col-lg-offset-2 row" id="char-container-group">
+  <ngx-charts-bar-vertical-2d [view]="view" [scheme]="colorScheme" [results]="multi" [gradient]="gradient" [xAxis]="showXAxis"
+    [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" (select)="onSelect($event)">
+  </ngx-charts-bar-vertical-2d>
+</div>
+
+<hr>
+
+<div class="col-lg-8 col-lg-offset-2 row" id="char-container-treemap">
+  <ngx-charts-tree-map [view]="view" [scheme]="colorScheme" [results]="single" (select)="onSelect($event)">
+  </ngx-charts-tree-map>
+</div>
+
+<hr>
+<div class="col-lg-8 col-lg-offset-2 row" id="char-container-numbercard">
+  <ngx-charts-number-card [view]="view" [scheme]="colorScheme" [results]="single" (select)="onSelect($event)">
+  </ngx-charts-number-card>
+</div>
+
+<hr>
+<div class="col-lg-8 col-lg-offset-2 row" id="char-container-numbercard">
+  <ngx-charts-advanced-pie-chart [view]="view" [scheme]="colorScheme" [results]="single" [gradient]="gradient" (select)="onSelect($event)">
+  </ngx-charts-advanced-pie-chart>
+</div>
+
+<hr>
+<div class="col-lg-8 col-lg-offset-2 row" id="char-container-treemap">
+  <ngx-charts-area-chart-stacked [view]="view" [scheme]="colorScheme" [results]="multi" [gradient]="gradient" [xAxis]="showXAxis"
+    [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" (select)="onSelect($event)">
+  </ngx-charts-area-chart-stacked>
+</div>
+<hr>
+<div class="col-lg-8 col-lg-offset-2 row" id="char-container-treemap">
+  <ngx-charts-line-chart [view]="view" [scheme]="colorScheme" [results]="multi" [gradient]="gradient" [xAxis]="showXAxis"
+    [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" [autoScale]="autoScale" (select)="onSelect($event)">
+  </ngx-charts-line-chart>
+</div>
+<hr>
+<div class="col-lg-8 col-lg-offset-2 row" id="char-container-treemap">
+  <ngx-charts-pie-chart [view]="view" [scheme]="colorScheme" [results]="single" [legend]="showLegend" [explodeSlices]="explodeSlices"
+    [labels]="showLabels" [doughnut]="doughnut" [gradient]="gradient" (select)="onSelect($event)">
+  </ngx-charts-pie-chart>
+</div>
+<hr>
+<div class="col-lg-8 col-lg-offset-2 row" id="char-container-treemap">
+  <ngx-charts-pie-grid [view]="view" [scheme]="colorScheme" [results]="single" (select)="onSelect($event)">
+  </ngx-charts-pie-grid>
+</div>
+<hr>
+<div class="col-lg-8 col-lg-offset-2 row" id="char-container-treemap">
+  <ngx-charts-bar-horizontal [view]="view" [scheme]="colorScheme" [results]="single" [gradient]="gradient" [xAxis]="showXAxis"
+    [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" (select)="onSelect($event)">
+  </ngx-charts-bar-horizontal>
+</div>
+<hr>
+<div class="col-lg-8 col-lg-offset-2 row" id="char-container-treemap">
+  <ngx-charts-bar-horizontal-2d [view]="view" [scheme]="colorScheme" [results]="multi" [gradient]="gradient" [xAxis]="showXAxis"
+    [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" (select)="onSelect($event)">
+  </ngx-charts-bar-horizontal-2d>
+</div>
+<hr>
+<div class="col-lg-8 col-lg-offset-2  row" id="char-container-treemap">
+  <ngx-charts-bar-vertical-stacked [view]="view" [scheme]="colorScheme" [results]="multi" [gradient]="gradient" [xAxis]="showXAxis"
+    [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" (select)="onSelect($event)">
+  </ngx-charts-bar-vertical-stacked>
+</div>
+<hr>
+<div class="col-lg-8 col-lg-offset-2 row" id="char-container-treemap">
+  <ngx-charts-bar-vertical-normalized [view]="view" [scheme]="colorScheme" [results]="multi" [gradient]="gradient"
+    [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" (select)="onSelect($event)">
+  </ngx-charts-bar-vertical-normalized>
+</div>
+<hr>
+<div class="col-lg-8 col-lg-offset-2 row" id="char-container-treemap">
+  <ngx-charts-bar-horizontal-normalized [view]="view" [scheme]="colorScheme" [results]="multi" [gradient]="gradient"
+    [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" (select)="onSelect($event)">
+  </ngx-charts-bar-horizontal-normalized>
+</div>
+<hr>
+<div class="col-lg-8 col-lg-offset-2  row" id="char-container-treemap">
+  <ngx-charts-line-chart [view]="view" [scheme]="colorScheme" [results]="multi" [gradient]="gradient" [xAxis]="showXAxis"
+    [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" [autoScale]="autoScale" (select)="onSelect($event)">
+  </ngx-charts-line-chart>
+</div>
+<hr>
+<div class="col-lg-8 col-lg-offset-2 row" id="char-container-treemap">
+  <ngx-charts-area-chart-normalized [view]="view" [scheme]="colorScheme" [results]="multi" [gradient]="gradient"
+    [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" (select)="onSelect($event)">
+  </ngx-charts-area-chart-normalized>
+</div>
+<hr>
+<div class="col-lg-8 col-lg-offset-2 row" id="char-container-treemap">
+  <ngx-charts-number-card [view]="view" [scheme]="colorScheme" [results]="single" (select)="onSelect($event)">
+  </ngx-charts-number-card>
+</div>
+<hr>
+<div class="col-lg-8 col-lg-offset-2 row" id="char-container-treemap">
+  <ngx-charts-gauge [view]="view" [scheme]="colorScheme" [results]="single" [min]="0" [max]="100" [angleSpan]="240"
+    [startAngle]="-120" [units]="'alerts'" [bigSegments]="10" [smallSegments]="5" (select)="onSelect($event)">
+  </ngx-charts-gauge>
+</div>
+<hr>

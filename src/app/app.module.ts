@@ -2,6 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule } from '@angular/forms';
 import {HttpModule } from '@angular/http';
+import { EditorModule } from '@tinymce/tinymce-angular';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ChartsModule } from 'ng2-charts';
+import { MatButtonModule } from '@angular/material';
 
 
 import { AppComponent } from './app.component';
@@ -14,6 +19,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { KeeperComponent } from './components/keeper/keeper.component';
 import { GuardarEmailComponent } from './modules/guardar-email/guardar-email.component';
 import { MostrarEmailComponent } from './modules/mostrar-email/mostrar-email.component';
+import { GraphsComponent } from './components/graphs/graphs.component';
 
 @NgModule({
   declarations: [
@@ -25,13 +31,19 @@ import { MostrarEmailComponent } from './modules/mostrar-email/mostrar-email.com
     ContactComponent,
     KeeperComponent,
     GuardarEmailComponent,
-    MostrarEmailComponent
+    MostrarEmailComponent,
+    GraphsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    EditorModule,
+    NgxChartsModule,
+    BrowserAnimationsModule,
+    ChartsModule,
+    MatButtonModule,
   ],
   providers: [], // Servicios de manera Global
   bootstrap: [AppComponent]
